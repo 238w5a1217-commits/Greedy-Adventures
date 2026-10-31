@@ -25,10 +25,32 @@ const IMG = {
   vipVideo: "https://www.greedyadventures.com/greedy/package-previews/vip-landscape.mp4",
 };
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function HomePage() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+
+  // Smooth scroll reveal observer
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("revealed");
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "0px 0px -40px 0px",
+      }
+    );
+
+    const elements = document.querySelectorAll(".reveal-on-scroll");
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
 
   const scrollTo = (id: string) => {
     if (id === "hero") {
@@ -134,7 +156,7 @@ export default function HomePage() {
 
       {/* ─── SECTION 2: THE EXPERIENCE ─── */}
       <section id="experience" className="w-full py-20 lg:py-32 px-4 lg:px-16 scroll-mt-20" style={{ background: "#f5f4ee" }}>
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center reveal-on-scroll">
           <div className="lg:col-span-7 relative">
             <div className="relative overflow-hidden rounded-xl shadow-2xl">
               <img
@@ -197,7 +219,7 @@ export default function HomePage() {
       {/* ─── SECTION 3: PACKAGES ─── */}
       <section id="packages" className="w-full py-20 lg:py-32 px-4 lg:px-16 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
             <span className="text-[#006780] text-[11px] font-bold tracking-[0.15em] uppercase block mb-2">FIND YOUR EXPERIENCE</span>
             <h2
               className="text-black text-[32px] sm:text-[48px] mb-4"
@@ -214,7 +236,7 @@ export default function HomePage() {
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {/* ECO */}
-            <div className="flex flex-col bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border border-[#c4c6cd]/20 w-[85vw] max-w-[340px] flex-shrink-0 snap-center md:w-auto md:max-w-none md:flex-shrink md:snap-align-none">
+            <div className="flex flex-col bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border border-[#c4c6cd]/20 w-[85vw] max-w-[340px] flex-shrink-0 snap-center md:w-auto md:max-w-none md:flex-shrink md:snap-align-none reveal-on-scroll reveal-delay-100">
               <div className="h-[190px] sm:h-[220px] w-full overflow-hidden relative">
                 <img src={IMG.ecoLandscape} alt="Eco tandem package preview" className="w-full h-full object-cover" />
                 <div className="absolute top-4 left-4">
@@ -252,7 +274,7 @@ export default function HomePage() {
             </div>
 
             {/* DELUXE */}
-            <div className="flex flex-col bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border border-[#c4c6cd]/20 w-[85vw] max-w-[340px] flex-shrink-0 snap-center md:w-auto md:max-w-none md:flex-shrink md:snap-align-none">
+            <div className="flex flex-col bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border border-[#c4c6cd]/20 w-[85vw] max-w-[340px] flex-shrink-0 snap-center md:w-auto md:max-w-none md:flex-shrink md:snap-align-none reveal-on-scroll reveal-delay-200">
               <div className="h-[190px] sm:h-[220px] w-full overflow-hidden relative bg-black">
                 <video
                   suppressHydrationWarning
@@ -301,7 +323,7 @@ export default function HomePage() {
             </div>
 
             {/* VIP */}
-            <div className="flex flex-col bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border-2 border-[#ffdea6] relative w-[85vw] max-w-[340px] flex-shrink-0 snap-center md:w-auto md:max-w-none md:flex-shrink md:snap-align-none">
+            <div className="flex flex-col bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border-2 border-[#ffdea6] relative w-[85vw] max-w-[340px] flex-shrink-0 snap-center md:w-auto md:max-w-none md:flex-shrink md:snap-align-none reveal-on-scroll reveal-delay-300">
               <div className="h-[190px] sm:h-[220px] w-full overflow-hidden relative bg-black">
                 <video
                   suppressHydrationWarning
@@ -357,7 +379,7 @@ export default function HomePage() {
       <section className="w-full py-24 px-4 lg:px-16 relative overflow-hidden" style={{ background: "#091d2e" }}>
         <div className="absolute -top-40 -left-40 w-96 h-96 rounded-full blur-3xl pointer-events-none" style={{ background: "rgba(16,60,82,0.6)" }} />
         <div className="absolute -bottom-40 -right-40 w-96 h-96 rounded-full blur-3xl pointer-events-none" style={{ background: "rgba(255,222,166,0.1)" }} />
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="max-w-7xl mx-auto relative z-10 reveal-on-scroll">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="text-[#ffdea6] text-[11px] font-bold tracking-[0.15em] uppercase block mb-2">MARITIME FLIGHT METRICS</span>
             <h2 className="text-white text-[32px] sm:text-[48px]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>THE EXPERIENCE OF A LIFETIME</h2>
@@ -382,7 +404,7 @@ export default function HomePage() {
 
       {/* ─── SECTION 5: JOURNEY ─── */}
       <section id="journey" className="w-full py-20 lg:py-32 px-4 lg:px-16" style={{ background: "#f5f4ee" }}>
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto reveal-on-scroll">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div>
               <span className="text-[#006780] text-[11px] font-bold tracking-[0.15em] uppercase block mb-2">PRE-FLIGHT TO TOUCHDOWN</span>
@@ -466,7 +488,7 @@ export default function HomePage() {
 
       {/* ─── SECTION 6: GALLERY ─── */}
       <section id="gallery" className="w-full py-20 lg:py-32 px-4 lg:px-16 bg-white">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto reveal-on-scroll">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="text-[#006780] text-[11px] font-bold tracking-[0.15em] uppercase block mb-2">
               EXPERIENCE ARCHIVE
@@ -709,7 +731,7 @@ export default function HomePage() {
           </div>
 
           {/* Interactive GOOD TO KNOW Accordion */}
-          <div className="bg-white rounded-2xl p-6 sm:p-10 shadow-xs border border-[#c4c6cd]/30">
+          <div className="bg-white rounded-2xl p-6 sm:p-10 shadow-xs border border-[#c4c6cd]/30 reveal-on-scroll">
             <h3
               className="text-[24px] sm:text-[30px] font-bold text-black tracking-tight mb-6 uppercase"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
@@ -768,7 +790,7 @@ export default function HomePage() {
         <div className="absolute inset-0 opacity-20 pointer-events-none">
           <img src={IMG.freefall} alt="Sky background" className="w-full h-full object-cover grayscale contrast-125" style={{ filter: "grayscale(1) contrast(1.25)" }} />
         </div>
-        <div className="max-w-4xl mx-auto text-center relative z-10 flex flex-col items-center">
+        <div className="max-w-4xl mx-auto text-center relative z-10 flex flex-col items-center reveal-on-scroll">
           <span className="text-[#ffdea6] text-[11px] font-bold tracking-[0.15em] uppercase mb-4">RESERVE YOUR FLIGHT PROFILE</span>
           <h2
             className="text-[40px] sm:text-[56px] md:text-[72px] font-normal mb-6 leading-tight"
