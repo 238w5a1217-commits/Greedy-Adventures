@@ -118,16 +118,16 @@ Open **[http://localhost:3000](http://localhost:3000)** in your browser.
 
 ```mermaid
 flowchart TD
-    User["Customer Inquiry"] --> RAG["Keyword & Semantic Token Retrieval"]
-    RAG --> Grounding["Grounded System Prompt + 5 Pattaya Sources"]
-    Grounding --> AI["AI Backend (Groq / Gemini)"]
-    AI --> Parser["Intent & Media Selector"]
-    
-    Parser -->|"General Inquiries"| Text["Text + Package Cards + Source Citations"]
-    Parser -->|"Brochure Inquiries"| PDF["Text + Interactive PDF Card (Open / Download)"]
-    Parser -->|"Video Inquiries"| Video["Text + Embedded 4K Video Player"]
-    Parser -->|"Dual Inquiries"| Bundle["Text + Both PDF Card & Video Player"]
-    Parser -->|"Unknown / Out of Scope"| Fallback["Honest Fallback (WhatsApp Concierge: +66800948586)"]
+    A["Customer Inquiry"] --> B["Keyword & Semantic Token Retrieval"]
+    B --> C["Grounded System Prompt + 5 Pattaya Sources"]
+    C --> D["AI Backend (Groq / Gemini)"]
+    D --> E["Intent & Media Selector"]
+
+    E --> F["Text Response + Package Cards"]
+    E --> G["Interactive PDF Brochure (Open / Download)"]
+    E --> H["Embedded 4K Experience Video Player"]
+    E --> I["Media Bundle (PDF + 4K Video Player)"]
+    E --> J["Honest Grounded Fallback (WhatsApp Concierge)"]
 ```
 
 ### The 4 Response Types:
