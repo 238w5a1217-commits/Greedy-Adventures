@@ -4,8 +4,8 @@ A production-grade, full-stack Next.js + TypeScript web application and AI Conci
 
 Built with **Next.js (App Router)**, **TypeScript**, **Tailwind CSS**, **Groq Ultra-Fast Inference Backend** (with Google Gemini fallback), **Zod schema validation**, and accessible interactive UI components.
 
-- **Production Prototype**: [Sea View Skydiving Experience](http://localhost:3000)
-- **Knowledge View URL**: [http://localhost:3000/knowledge](http://localhost:3000/knowledge)
+- **Production Prototype**: [Sea View Skydiving Experience](https://greedy-adventure-nine.vercel.app/)
+- **Knowledge View URL**: [http://localhost:3000/knowledge](https://greedy-adventure-nine.vercel.app/knowledge)
 
 ---
 
