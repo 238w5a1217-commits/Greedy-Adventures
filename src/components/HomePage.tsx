@@ -20,7 +20,7 @@ const IMG = {
   step1: "https://www.greedyadventures.com/greedy/trips/dropzone-thailand-check-in.jpg",
   step2: "https://pub-89f493a2b50b4e43b99552a737bef138.r2.dev/offerings/sea-view-tandem-skydive-pattaya/108d38.jpg",
   step3: "https://pub-89f493a2b50b4e43b99552a737bef138.r2.dev/offerings/apex-gallery/plane.webp",
-  step4: "https://pub-89f493a2b50b4e43b99552a737bef138.r2.dev/offerings/sea-view-tandem-skydive-pattaya/108d38.jpg",
+  step4: "https://pub-89f493a2b50b4e43b99552a737bef138.r2.dev/offerings/apex-gallery/tandem-with-sea-view.webp",
   step5: "https://images.unsplash.com/photo-1577116058854-8305d815b581?q=80&w=800&auto=format&fit=crop",
   galleryTandem: "https://images.unsplash.com/photo-1560419656-c2fe828696af?q=80&w=1200&auto=format&fit=crop",
   gallerySunset: "https://images.unsplash.com/photo-1560419656-c2fe828696af?q=80&w=1200&auto=format&fit=crop",
