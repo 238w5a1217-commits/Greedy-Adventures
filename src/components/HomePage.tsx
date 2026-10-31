@@ -5,9 +5,9 @@
 // and return null when fetched server-side by Next.js Image optimization.
 
 const IMG = {
-  hero: "https://images.unsplash.com/photo-1521673845931-7b0fb2a78dd9?q=80&w=2070&auto=format&fit=crop",
+  hero: "https://pub-89f493a2b50b4e43b99552a737bef138.r2.dev/offerings/apex-gallery/tandem-with-sea-view.webp",
   canopy: "https://pub-89f493a2b50b4e43b99552a737bef138.r2.dev/offerings/apex-gallery/tandem-with-sea-view.webp",
-  deluxe: "https://images.unsplash.com/photo-1601024445121-e5b82f020549?q=80&w=1200&auto=format&fit=crop",
+  deluxe: "https://pub-89f493a2b50b4e43b99552a737bef138.r2.dev/offerings/sea-view-tandem-skydive-pattaya/108d38.jpg",
   freefall: "https://pub-89f493a2b50b4e43b99552a737bef138.r2.dev/offerings/sea-view-tandem-skydive-pattaya/108d38.jpg",
   parachute: "https://pub-89f493a2b50b4e43b99552a737bef138.r2.dev/offerings/apex-gallery/tandem-with-sea-view.webp",
   coast: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop",
@@ -19,7 +19,7 @@ const IMG = {
   step4: "https://pub-89f493a2b50b4e43b99552a737bef138.r2.dev/offerings/apex-gallery/tandem-with-sea-view.webp",
   step5: "https://www.greedyadventures.com/greedy/trips/tandem-canopy-landing-g0250281.jpg",
   galleryTandem: "https://pub-89f493a2b50b4e43b99552a737bef138.r2.dev/offerings/apex-gallery/tandem-with-sea-view.webp",
-  gallerySunset: "https://images.unsplash.com/photo-1527631746610-bca00a040d60?q=80&w=1200&auto=format&fit=crop",
+  gallerySunset: "https://pub-89f493a2b50b4e43b99552a737bef138.r2.dev/offerings/apex-gallery/tandem-with-sea-view.webp",
   ecoLandscape: "https://www.greedyadventures.com/greedy/package-previews/eco-landscape.jpg",
   deluxeVideo: "https://www.greedyadventures.com/greedy/package-previews/deluxe-landscape.mp4",
   vipVideo: "https://www.greedyadventures.com/greedy/package-previews/vip-landscape.mp4",
@@ -32,6 +32,7 @@ export default function HomePage() {
 
   // Smooth scroll reveal observer
   useEffect(() => {
+    document.documentElement.classList.add("reveal-init");
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -41,15 +42,18 @@ export default function HomePage() {
         });
       },
       {
-        threshold: 0.1,
-        rootMargin: "0px 0px -40px 0px",
+        threshold: 0.05,
+        rootMargin: "0px 0px 60px 0px",
       }
     );
 
     const elements = document.querySelectorAll(".reveal-on-scroll");
     elements.forEach((el) => observer.observe(el));
 
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      document.documentElement.classList.remove("reveal-init");
+    };
   }, []);
 
   const scrollTo = (id: string) => {
