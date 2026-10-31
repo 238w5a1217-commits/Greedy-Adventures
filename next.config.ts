@@ -11,6 +11,14 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "images.unsplash.com",
       },
+      {
+        protocol: "https",
+        hostname: "pub-89f493a2b50b4e43b99552a737bef138.r2.dev",
+      },
+      {
+        protocol: "https",
+        hostname: "www.greedyadventures.com",
+      },
     ],
   },
   cacheComponents: true,
