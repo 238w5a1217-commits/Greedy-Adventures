@@ -163,7 +163,7 @@ export default function ChatWidget() {
         {/* Floating Concierge Chat Window - Natural Warm Ivory Theme */}
         {isOpen && (
           <div
-            className="fixed inset-x-3 bottom-3 z-50 h-[82dvh] max-h-[680px] sm:inset-auto sm:bottom-6 sm:right-6 sm:w-[410px] sm:h-[min(640px,calc(100vh-32px))] bg-[#FAF9F3] border border-[#E5E3D9] rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-fade-in-up"
+            className="fixed inset-x-3 bottom-3 z-50 h-[85dvh] max-h-[700px] sm:inset-auto sm:bottom-6 sm:right-6 sm:w-[410px] sm:h-[min(640px,calc(100vh-32px))] bg-[#FAF9F3] border border-[#E5E3D9] rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-fade-in-up"
             role="dialog"
             aria-modal="true"
             aria-label="AI Experience Concierge Chat"
