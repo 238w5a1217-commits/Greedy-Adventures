@@ -21,10 +21,14 @@ export default function ChatHeader({ onClose, onReset }: ChatHeaderProps) {
         {/* Brand & Concierge Title */}
         <div className="flex items-center gap-3 min-w-0">
           <div
-            className="relative w-9 h-9 rounded-xl bg-[#FAF9F3] border border-[#E5E3D9] flex items-center justify-center flex-shrink-0 text-[#B88E3E] shadow-inner"
+            className="relative w-9 h-9 rounded-xl overflow-hidden border border-[#E5E3D9] flex items-center justify-center flex-shrink-0 shadow-inner bg-[#0B1422]"
             aria-hidden="true"
           >
-            <Compass className="w-5 h-5 text-[#B88E3E]" />
+            <img
+              src="https://media4.giphy.com/avatars/acetech/RK67baKq9A79.gif"
+              alt="AI Concierge"
+              className="w-full h-full object-cover"
+            />
             <span
               className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-[#008F70] border-2 border-white"
               title="Online"
