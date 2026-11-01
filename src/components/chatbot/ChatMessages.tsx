@@ -52,7 +52,7 @@ export function ChatMessages({
     return (
       <div
         ref={containerRef}
-        className="flex-1 overflow-y-auto overflow-x-hidden bg-[#FAF9F3] flex flex-col justify-center scrollbar-thin w-full max-w-full"
+        className="flex-1 overflow-y-auto overflow-x-hidden bg-[#FAF9F3] flex flex-col scrollbar-thin w-full max-w-full px-4 pt-4 pb-4 sm:px-5 sm:pt-6 sm:pb-5"
       >
         <WelcomeScreen
           onSelectSuggestion={onSuggestionClick}
@@ -66,7 +66,7 @@ export function ChatMessages({
   return (
     <div
       ref={containerRef}
-      className="flex-1 overflow-y-auto overflow-x-hidden p-3.5 sm:p-4 space-y-4 bg-[#FAF9F3] text-[#1E293B] w-full max-w-full"
+      className="flex-1 overflow-y-auto overflow-x-hidden p-4 sm:p-5 pt-4 space-y-4 bg-[#FAF9F3] text-[#1E293B] w-full max-w-full"
       role="log"
       aria-label="Conversation history"
     >
