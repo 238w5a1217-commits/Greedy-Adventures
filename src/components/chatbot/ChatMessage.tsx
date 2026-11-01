@@ -110,14 +110,22 @@ export default function ChatMessage({ message, onSuggestionClick }: ChatMessageP
       >
         {/* Avatar */}
         <div
-          className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 border mt-0.5 ${
+          className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 border mt-0.5 overflow-hidden ${
             isUser
               ? "bg-[#0B1422] border-[#0B1422] text-[#D9B36C]"
-              : "bg-white border-[#E5E3D9] text-[#B88E3E] shadow-xs"
+              : "bg-[#0B1422] border-[#E5E3D9] text-[#B88E3E] shadow-xs"
           }`}
           aria-hidden="true"
         >
-          {isUser ? <User className="w-3.5 h-3.5" /> : <Compass className="w-3.5 h-3.5" />}
+          {isUser ? (
+            <User className="w-3.5 h-3.5" />
+          ) : (
+            <img
+              src="https://media4.giphy.com/avatars/acetech/RK67baKq9A79.gif"
+              alt="AI"
+              className="w-full h-full object-cover"
+            />
+          )}
         </div>
 
         {/* Message Container */}
