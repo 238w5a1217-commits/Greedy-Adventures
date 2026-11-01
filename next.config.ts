@@ -19,6 +19,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "www.greedyadventures.com",
       },
+      {
+        protocol: "https",
+        hostname: "media4.giphy.com",
+      },
     ],
   },
   cacheComponents: true,
