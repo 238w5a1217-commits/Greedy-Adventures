@@ -33,12 +33,12 @@ const WELCOME_SUGGESTIONS = [
 
 export default function WelcomeScreen({ onSelectSuggestion, disabled }: WelcomeScreenProps) {
   return (
-    <div className="flex flex-col items-center justify-center text-center px-4 py-4 sm:px-5 sm:py-5 my-auto animate-fade-in-up w-full">
+    <div className="flex flex-col items-center text-center px-1 py-1 sm:px-3 sm:py-2 w-full max-w-[360px] mx-auto animate-fade-in-up">
       {/* Greeting Title */}
-      <span className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-[#B88E3E] mb-1">
+      <span className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#B88E3E] mb-1.5 block">
         Greedy Adventures · Concierge
       </span>
-      <h2 className="text-[17px] sm:text-[18px] font-extrabold text-[#0B1422] tracking-tight leading-snug max-w-[340px]">
+      <h2 className="text-[18px] sm:text-[20px] font-extrabold text-[#0B1422] tracking-tight leading-snug max-w-[340px]">
         Luxury Sea View Skydiving
       </h2>
 
