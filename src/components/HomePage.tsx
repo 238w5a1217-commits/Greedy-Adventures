@@ -227,7 +227,7 @@ export default function HomePage() {
       {/* ─── SECTION 3: PACKAGES ─── */}
       <section id="packages" className="w-full py-20 lg:py-32 px-4 lg:px-16 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
+          <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-[#006780] text-[11px] font-bold tracking-[0.15em] uppercase block mb-2">FIND YOUR EXPERIENCE</span>
             <h2
               className="text-black text-[32px] sm:text-[48px] mb-4"
@@ -244,7 +244,7 @@ export default function HomePage() {
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {/* ECO */}
-            <div className="flex flex-col bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border border-[#c4c6cd]/20 w-[85vw] max-w-[340px] flex-shrink-0 snap-center md:w-auto md:max-w-none md:flex-shrink md:snap-align-none reveal-on-scroll reveal-delay-100">
+            <div className="flex flex-col bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border border-[#c4c6cd]/20 w-[85vw] max-w-[340px] flex-shrink-0 snap-center md:w-auto md:max-w-none md:flex-shrink md:snap-align-none">
               <div className="h-[190px] sm:h-[220px] w-full overflow-hidden relative">
                 <img src={IMG.ecoLandscape} alt="Eco tandem package preview" className="w-full h-full object-cover" />
                 <div className="absolute top-4 left-4">
@@ -282,7 +282,7 @@ export default function HomePage() {
             </div>
 
             {/* DELUXE */}
-            <div className="flex flex-col bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border border-[#c4c6cd]/20 w-[85vw] max-w-[340px] flex-shrink-0 snap-center md:w-auto md:max-w-none md:flex-shrink md:snap-align-none reveal-on-scroll reveal-delay-200">
+            <div className="flex flex-col bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border border-[#c4c6cd]/20 w-[85vw] max-w-[340px] flex-shrink-0 snap-center md:w-auto md:max-w-none md:flex-shrink md:snap-align-none">
               <div className="h-[190px] sm:h-[220px] w-full overflow-hidden relative bg-black">
                 <video
                   suppressHydrationWarning
@@ -331,7 +331,7 @@ export default function HomePage() {
             </div>
 
             {/* VIP */}
-            <div className="flex flex-col bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border-2 border-[#ffdea6] relative w-[85vw] max-w-[340px] flex-shrink-0 snap-center md:w-auto md:max-w-none md:flex-shrink md:snap-align-none reveal-on-scroll reveal-delay-300">
+            <div className="flex flex-col bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border-2 border-[#ffdea6] relative w-[85vw] max-w-[340px] flex-shrink-0 snap-center md:w-auto md:max-w-none md:flex-shrink md:snap-align-none">
               <div className="h-[190px] sm:h-[220px] w-full overflow-hidden relative bg-black">
                 <video
                   suppressHydrationWarning
