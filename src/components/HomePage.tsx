@@ -240,40 +240,44 @@ export default function HomePage() {
 
           {/* Packages: Mobile Horizontal Snap Slider / Desktop Grid */}
           <div
-            className="flex md:grid md:grid-cols-3 gap-5 md:gap-8 items-stretch overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-4 md:pb-0 px-4 -mx-4 md:px-0 md:mx-0 scroll-smooth"
+            className="flex md:grid md:grid-cols-3 gap-4 sm:gap-5 md:gap-8 items-stretch overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-4 md:pb-0 px-4 -mx-4 md:px-0 md:mx-0 scroll-smooth"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {/* ECO */}
-            <div className="flex flex-col bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border border-[#c4c6cd]/20 w-[85vw] max-w-[340px] flex-shrink-0 snap-center md:w-auto md:max-w-none md:flex-shrink md:snap-align-none">
-              <div className="h-[190px] sm:h-[220px] w-full overflow-hidden relative">
+            <div className="flex flex-col bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border border-[#c4c6cd]/20 w-[82vw] max-w-[310px] flex-shrink-0 snap-center md:w-auto md:max-w-none md:flex-shrink md:snap-align-none">
+              <div className="h-[145px] sm:h-[180px] md:h-[220px] w-full overflow-hidden relative">
                 <img src={IMG.ecoLandscape} alt="Eco tandem package preview" className="w-full h-full object-cover" />
-                <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 rounded text-[11px] font-bold" style={{ background: "rgba(255,255,255,0.9)" }}>TIER 01 — ESSENTIAL</span>
+                <div className="absolute top-3 left-3 sm:top-4 sm:left-4">
+                  <span className="px-2.5 py-0.5 sm:px-3 sm:py-1 rounded text-[10px] sm:text-[11px] font-bold" style={{ background: "rgba(255,255,255,0.92)" }}>TIER 01 — ESSENTIAL</span>
                 </div>
               </div>
-              <div className="p-5 sm:p-8 flex flex-col flex-grow">
-                <h3 className="text-[24px] text-black mb-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>ECO TANDEM</h3>
-                <p className="text-[#43474c] text-[14px] mb-6">The essential skydiving experience.</p>
-                <div className="flex items-baseline gap-2 mb-8">
-                  <span className="text-[32px] font-bold text-black" style={{ fontFamily: "'Cormorant Garamond', serif" }}>฿9,500</span>
-                  <span className="text-[12px] text-[#43474c]">THB / Jumper</span>
-                </div>
-                <div className="w-full h-px bg-[#efeee8] mb-6" />
-                <ul className="flex flex-col gap-3 text-[14px] mb-8 flex-grow">
-                  {["13,000 FT Tandem High-Altitude Jump", "Full Safety Briefing & USPA Flight Gear", "Commemorative Achievement Certificate"].map((feat) => (
-                    <li key={feat} className="flex items-center gap-3">
-                      <span className="material-symbols-outlined text-[#006780]" style={{ fontSize: "18px" }}>check_circle</span>
-                      {feat}
+              <div className="p-4 sm:p-6 md:p-8 flex flex-col flex-grow justify-between">
+                <div>
+                  <h3 className="text-[20px] sm:text-[22px] md:text-[24px] text-black mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>ECO TANDEM</h3>
+                  <div className="min-h-[36px] md:min-h-[42px] flex items-center mb-3 md:mb-4">
+                    <p className="text-[#43474c] text-[12.5px] sm:text-[13px] md:text-[14px] leading-snug">The essential pure-flight skydiving experience over the Gulf.</p>
+                  </div>
+                  <div className="flex items-baseline gap-2 mb-3 md:mb-6">
+                    <span className="text-[26px] sm:text-[28px] md:text-[32px] font-bold text-black" style={{ fontFamily: "'Cormorant Garamond', serif" }}>฿9,500</span>
+                    <span className="text-[11px] sm:text-[12px] text-[#43474c]">THB / Jumper</span>
+                  </div>
+                  <div className="w-full h-px bg-[#efeee8] mb-3 md:mb-6" />
+                  <ul className="flex flex-col gap-2 sm:gap-2.5 md:gap-3 text-[12px] sm:text-[13px] md:text-[14px] mb-4 md:mb-8">
+                    {["13,000 FT Tandem High-Altitude Jump", "Full Safety Briefing & USPA Flight Gear", "Commemorative Achievement Certificate"].map((feat) => (
+                      <li key={feat} className="flex items-center gap-2.5 sm:gap-3">
+                        <span className="material-symbols-outlined text-[#006780]" style={{ fontSize: "16px" }}>check_circle</span>
+                        <span className="truncate">{feat}</span>
+                      </li>
+                    ))}
+                    <li className="flex items-center gap-2.5 sm:gap-3 text-[#74777d]">
+                      <span className="material-symbols-outlined text-[#74777d]" style={{ fontSize: "16px" }}>cancel</span>
+                      <span className="line-through truncate">Photo &amp; Video Media Files</span>
                     </li>
-                  ))}
-                  <li className="flex items-center gap-3 text-[#74777d]">
-                    <span className="material-symbols-outlined text-[#74777d]" style={{ fontSize: "18px" }}>cancel</span>
-                    <span className="line-through">Photo &amp; Video Media Files</span>
-                  </li>
-                </ul>
+                  </ul>
+                </div>
                 <button
                   onClick={() => scrollTo("details")}
-                  className="w-full py-3.5 rounded text-black text-[11px] font-bold tracking-[0.15em] uppercase hover:bg-[#efeee8] transition-colors"
+                  className="w-full py-2.5 sm:py-3 md:py-3.5 rounded text-black text-[10.5px] sm:text-[11px] font-bold tracking-[0.14em] uppercase hover:bg-[#efeee8] transition-colors"
                   style={{ background: "#f5f4ee" }}
                 >
                   BOOK ECO JUMP
@@ -282,8 +286,8 @@ export default function HomePage() {
             </div>
 
             {/* DELUXE */}
-            <div className="flex flex-col bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border border-[#c4c6cd]/20 w-[85vw] max-w-[340px] flex-shrink-0 snap-center md:w-auto md:max-w-none md:flex-shrink md:snap-align-none">
-              <div className="h-[190px] sm:h-[220px] w-full overflow-hidden relative bg-black">
+            <div className="flex flex-col bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border border-[#c4c6cd]/20 w-[82vw] max-w-[310px] flex-shrink-0 snap-center md:w-auto md:max-w-none md:flex-shrink md:snap-align-none">
+              <div className="h-[145px] sm:h-[180px] md:h-[220px] w-full overflow-hidden relative bg-black">
                 <video
                   suppressHydrationWarning
                   autoPlay
@@ -295,34 +299,38 @@ export default function HomePage() {
                 >
                   <source src={IMG.deluxeVideo} type="video/mp4" />
                 </video>
-                <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 rounded text-[11px] font-bold" style={{ background: "rgba(255,255,255,0.9)" }}>TIER 02 — HANDCAM 4K</span>
+                <div className="absolute top-3 left-3 sm:top-4 sm:left-4">
+                  <span className="px-2.5 py-0.5 sm:px-3 sm:py-1 rounded text-[10px] sm:text-[11px] font-bold" style={{ background: "rgba(255,255,255,0.92)" }}>TIER 02 — HANDCAM 4K</span>
                 </div>
               </div>
-              <div className="p-5 sm:p-8 flex flex-col flex-grow">
-                <h3 className="text-[24px] text-black mb-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>DELUXE MEDIA</h3>
-                <p className="text-[#43474c] text-[14px] mb-6">Capture every smile, scream, and coastal sweep directly from your instructor&apos;s wrist camera.</p>
-                <div className="flex items-baseline gap-2 mb-8">
-                  <span className="text-[32px] font-bold text-black" style={{ fontFamily: "'Cormorant Garamond', serif" }}>฿12,500</span>
-                  <span className="text-[12px] text-[#43474c]">THB / Jumper</span>
+              <div className="p-4 sm:p-6 md:p-8 flex flex-col flex-grow justify-between">
+                <div>
+                  <h3 className="text-[20px] sm:text-[22px] md:text-[24px] text-black mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>DELUXE MEDIA</h3>
+                  <div className="min-h-[36px] md:min-h-[42px] flex items-center mb-3 md:mb-4">
+                    <p className="text-[#43474c] text-[12.5px] sm:text-[13px] md:text-[14px] leading-snug">Instructor wrist-cam capturing smiles, screams &amp; ocean vistas.</p>
+                  </div>
+                  <div className="flex items-baseline gap-2 mb-3 md:mb-6">
+                    <span className="text-[26px] sm:text-[28px] md:text-[32px] font-bold text-black" style={{ fontFamily: "'Cormorant Garamond', serif" }}>฿12,500</span>
+                    <span className="text-[11px] sm:text-[12px] text-[#43474c]">THB / Jumper</span>
+                  </div>
+                  <div className="w-full h-px bg-[#efeee8] mb-3 md:mb-6" />
+                  <ul className="flex flex-col gap-2 sm:gap-2.5 md:gap-3 text-[12px] sm:text-[13px] md:text-[14px] mb-4 md:mb-8">
+                    {[
+                      "13,000 FT Tandem High-Altitude Jump",
+                      "4K Wide-Angle Handcam Video & Photos",
+                      "Instant Digital AirDrop & Cloud Delivery",
+                      "USPA Flight Certification Document",
+                    ].map((feat) => (
+                      <li key={feat} className="flex items-center gap-2.5 sm:gap-3">
+                        <span className="material-symbols-outlined text-[#006780]" style={{ fontSize: "16px" }}>check_circle</span>
+                        <span className="truncate">{feat}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <div className="w-full h-px bg-[#efeee8] mb-6" />
-                <ul className="flex flex-col gap-3 text-[14px] mb-8 flex-grow">
-                  {[
-                    "13,000 FT Tandem High-Altitude Jump",
-                    "4K Wide-Angle Handcam Video & Photos",
-                    "Instant Digital AirDrop & Cloud Delivery",
-                    "USPA Flight Certification Document",
-                  ].map((feat) => (
-                    <li key={feat} className="flex items-center gap-3">
-                      <span className="material-symbols-outlined text-[#006780]" style={{ fontSize: "18px" }}>check_circle</span>
-                      {feat}
-                    </li>
-                  ))}
-                </ul>
                 <button
                   onClick={() => scrollTo("details")}
-                  className="w-full py-3.5 rounded text-white text-[11px] font-bold tracking-[0.15em] uppercase hover:bg-[#103C52] transition-colors"
+                  className="w-full py-2.5 sm:py-3 md:py-3.5 rounded text-white text-[10.5px] sm:text-[11px] font-bold tracking-[0.14em] uppercase hover:bg-[#103C52] transition-colors"
                   style={{ background: "#091d2e" }}
                 >
                   BOOK DELUXE
@@ -331,8 +339,8 @@ export default function HomePage() {
             </div>
 
             {/* VIP */}
-            <div className="flex flex-col bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border-2 border-[#ffdea6] relative w-[85vw] max-w-[340px] flex-shrink-0 snap-center md:w-auto md:max-w-none md:flex-shrink md:snap-align-none">
-              <div className="h-[190px] sm:h-[220px] w-full overflow-hidden relative bg-black">
+            <div className="flex flex-col bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border-2 border-[#ffdea6] relative w-[82vw] max-w-[310px] flex-shrink-0 snap-center md:w-auto md:max-w-none md:flex-shrink md:snap-align-none">
+              <div className="h-[145px] sm:h-[180px] md:h-[220px] w-full overflow-hidden relative bg-black">
                 <video
                   suppressHydrationWarning
                   autoPlay
@@ -344,35 +352,39 @@ export default function HomePage() {
                 >
                   <source src={IMG.vipVideo} type="video/mp4" />
                 </video>
-                <div className="absolute top-4 left-4 flex items-center gap-2">
-                  <span className="px-3 py-1 rounded text-[11px] font-bold" style={{ background: "rgba(255,255,255,0.9)" }}>TIER 03 — SIGNATURE</span>
-                  <span className="px-3 py-1 rounded text-[11px] font-bold text-[#271900]" style={{ background: "#ffdea6" }}>MOST REQUESTED</span>
+                <div className="absolute top-3 left-3 sm:top-4 sm:left-4 flex items-center gap-1.5 sm:gap-2">
+                  <span className="px-2.5 py-0.5 sm:px-3 sm:py-1 rounded text-[10px] sm:text-[11px] font-bold" style={{ background: "rgba(255,255,255,0.92)" }}>TIER 03 — SIGNATURE</span>
+                  <span className="px-2 py-0.5 sm:px-3 sm:py-1 rounded text-[9.5px] sm:text-[11px] font-bold text-[#271900]" style={{ background: "#ffdea6" }}>MOST REQUESTED</span>
                 </div>
               </div>
-              <div className="p-5 sm:p-8 flex flex-col flex-grow">
-                <h3 className="text-[24px] text-black mb-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>VIP CINEMATIC SUITE</h3>
-                <p className="text-[#43474c] text-[14px] mb-6">Your personal aerial cameraman flying alongside you for cinematic documentary perfection.</p>
-                <div className="flex items-baseline gap-2 mb-8">
-                  <span className="text-[32px] font-bold text-black" style={{ fontFamily: "'Cormorant Garamond', serif" }}>฿14,000</span>
-                  <span className="text-[12px] text-[#43474c]">THB / Jumper</span>
+              <div className="p-4 sm:p-6 md:p-8 flex flex-col flex-grow justify-between">
+                <div>
+                  <h3 className="text-[20px] sm:text-[22px] md:text-[24px] text-black mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>VIP CINEMATIC SUITE</h3>
+                  <div className="min-h-[36px] md:min-h-[42px] flex items-center mb-3 md:mb-4">
+                    <p className="text-[#43474c] text-[12.5px] sm:text-[13px] md:text-[14px] leading-snug">Dedicated aerial cameraman in freefall for 4K documentary reels.</p>
+                  </div>
+                  <div className="flex items-baseline gap-2 mb-3 md:mb-6">
+                    <span className="text-[26px] sm:text-[28px] md:text-[32px] font-bold text-black" style={{ fontFamily: "'Cormorant Garamond', serif" }}>฿14,000</span>
+                    <span className="text-[11px] sm:text-[12px] text-[#43474c]">THB / Jumper</span>
+                  </div>
+                  <div className="w-full h-px bg-[#efeee8] mb-3 md:mb-6" />
+                  <ul className="flex flex-col gap-2 sm:gap-2.5 md:gap-3 text-[12px] sm:text-[13px] md:text-[14px] mb-4 md:mb-8">
+                    {[
+                      "Dedicated Aerial Cameraman in Freefall",
+                      "Multi-angle 4K Cinematic Cut + Teaser Reel",
+                      "Priority Flight Manifest & Hangar Lounge",
+                      "Touchdown Champagne Welcome Toast",
+                    ].map((feat) => (
+                      <li key={feat} className="flex items-center gap-2.5 sm:gap-3">
+                        <span className="material-symbols-outlined text-[#e5c283]" style={{ fontSize: "16px" }}>star</span>
+                        <span className="truncate">{feat}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <div className="w-full h-px bg-[#efeee8] mb-6" />
-                <ul className="flex flex-col gap-3 text-[14px] mb-8 flex-grow">
-                  {[
-                    "Dedicated Aerial Cameraman in Freefall",
-                    "Multi-angle 4K Cinematic Cut + Teaser Reel",
-                    "Priority Flight Manifest & Hangar Lounge",
-                    "Touchdown Champagne Welcome Toast",
-                  ].map((feat) => (
-                    <li key={feat} className="flex items-center gap-3">
-                      <span className="material-symbols-outlined text-[#e5c283]" style={{ fontSize: "18px" }}>star</span>
-                      {feat}
-                    </li>
-                  ))}
-                </ul>
                 <button
                   onClick={() => scrollTo("details")}
-                  className="w-full py-3.5 rounded text-[#271900] text-[11px] font-bold tracking-[0.15em] uppercase hover:bg-white transition-colors shadow-md"
+                  className="w-full py-2.5 sm:py-3 md:py-3.5 rounded text-[#271900] text-[10.5px] sm:text-[11px] font-bold tracking-[0.14em] uppercase hover:bg-white transition-colors shadow-md"
                   style={{ background: "#ffdea6" }}
                 >
                   BOOK VIP EXPERIENCE
