@@ -121,32 +121,28 @@ export default function ChatWidget() {
 
   return (
     <>
-      {/* Floating Chat Launcher Button & Assist Pill */}
+      {/* Floating Chat Launcher Button (AI Concierge) */}
       <aside aria-label="Skydiving AI Experience Concierge">
         {!isOpen && (
-          <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2.5 pointer-events-none">
-            {/* Assistive Callout Pill - Positioned directly on TOP of the launcher button */}
+          <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex items-center pointer-events-none">
+            {/* Direct Floating AI Launcher Button - Using Animated GIF & Minimal AI Letter Badge */}
             <button
               type="button"
               onClick={() => setIsOpen(true)}
-              className="pointer-events-auto cursor-pointer flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md text-[#0B1422] border border-[#E5E3D9] shadow-lg hover:border-[#B88E3E]/70 hover:shadow-xl transition-all duration-300 text-[12px] font-semibold group hover:-translate-y-0.5 active:translate-y-0"
+              aria-label="Open AI Concierge"
+              className="pointer-events-auto group relative w-13 h-13 sm:w-14 sm:h-14 rounded-2xl p-0.5 bg-[#0B1422] border-2 border-[#D9B36C]/70 hover:border-[#D9B36C] shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center cursor-pointer overflow-visible"
             >
-              <span className="w-2 h-2 rounded-full bg-[#008F70] animate-pulse shrink-0" />
-              <span className="group-hover:text-[#B88E3E] transition-colors whitespace-nowrap">
-                How can I assist you?
+              <img
+                src="https://media4.giphy.com/avatars/acetech/RK67baKq9A79.gif"
+                alt="AI Concierge"
+                className="w-full h-full object-cover rounded-[14px]"
+              />
+              {/* Compact AI Badge (Minimal Letters) */}
+              <span className="absolute -top-1.5 -left-1.5 px-1.5 py-0.2 rounded-md bg-[#0B1422] text-[#ffdea6] text-[10px] font-black tracking-widest border border-[#ffdea6]/60 shadow-md">
+                AI
               </span>
-            </button>
-
-            {/* Circular/Rounded Luxury Launcher Button */}
-            <button
-              type="button"
-              onClick={() => setIsOpen(true)}
-              aria-label="Open Greedy Adventures Concierge"
-              className="pointer-events-auto group relative w-14 h-14 rounded-2xl bg-[#0B1422] hover:bg-[#152338] text-[#D9B36C] flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 border border-[#E5E3D9]/40 hover:border-[#D9B36C]"
-            >
-              <Compass className="w-6 h-6 text-[#D9B36C] group-hover:rotate-45 transition-transform duration-500" />
               {/* Online indicator */}
-              <span className="absolute -top-1 -right-1 w-3.5 h-3.5 bg-[#00CBA0] border-2 border-white rounded-full animate-pulse" />
+              <span className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-[#00CBA0] border-2 border-white rounded-full animate-pulse" />
             </button>
           </div>
         )}
