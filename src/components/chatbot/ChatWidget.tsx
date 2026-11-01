@@ -124,13 +124,13 @@ export default function ChatWidget() {
       {/* Floating Chat Launcher Button (AI Concierge) */}
       <aside aria-label="Skydiving AI Experience Concierge">
         {!isOpen && (
-          <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex items-center pointer-events-none">
-            {/* Direct Floating AI Launcher Button - Using Animated GIF & Minimal AI Letter Badge */}
+          <div className="fixed bottom-5 right-5 sm:bottom-7 sm:right-7 md:bottom-9 md:right-9 z-50 flex items-center pointer-events-none">
+            {/* Direct Floating AI Launcher Button - Lifted gracefully on desktop */}
             <button
               type="button"
               onClick={() => setIsOpen(true)}
               aria-label="Open AI Concierge"
-              className="pointer-events-auto group relative w-13 h-13 sm:w-14 sm:h-14 rounded-2xl p-0.5 bg-[#0B1422] border-2 border-[#D9B36C]/70 hover:border-[#D9B36C] shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center cursor-pointer overflow-visible"
+              className="pointer-events-auto group relative w-13 h-13 sm:w-14 sm:h-14 md:w-15 md:h-15 rounded-2xl p-0.5 bg-[#0B1422] border-2 border-[#D9B36C]/80 hover:border-[#D9B36C] shadow-[0_10px_32px_rgba(0,0,0,0.35)] transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center cursor-pointer overflow-visible hover:-translate-y-1"
             >
               <img
                 src="https://media4.giphy.com/avatars/acetech/RK67baKq9A79.gif"
@@ -138,11 +138,11 @@ export default function ChatWidget() {
                 className="w-full h-full object-cover rounded-[14px]"
               />
               {/* Compact AI Badge (Minimal Letters) */}
-              <span className="absolute -top-1.5 -left-1.5 px-1.5 py-0.2 rounded-md bg-[#0B1422] text-[#ffdea6] text-[10px] font-black tracking-widest border border-[#ffdea6]/60 shadow-md">
+              <span className="absolute -top-1.5 -left-1.5 px-1.5 py-0.5 rounded-md bg-[#0B1422] text-[#ffdea6] text-[10px] font-black tracking-widest border border-[#ffdea6]/70 shadow-md">
                 AI
               </span>
               {/* Online indicator */}
-              <span className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-[#00CBA0] border-2 border-white rounded-full animate-pulse" />
+              <span className="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-[#00CBA0] border-2 border-white rounded-full animate-pulse" />
             </button>
           </div>
         )}
@@ -159,7 +159,7 @@ export default function ChatWidget() {
         {/* Floating Concierge Chat Window - Natural Warm Ivory Theme */}
         {isOpen && (
           <div
-            className="fixed inset-x-3 bottom-3 z-50 h-[85dvh] max-h-[700px] sm:inset-auto sm:bottom-6 sm:right-6 sm:w-[410px] sm:h-[min(640px,calc(100vh-32px))] bg-[#FAF9F3] border border-[#E5E3D9] rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-fade-in-up"
+            className="fixed inset-x-3 bottom-3 z-50 h-[85dvh] max-h-[700px] sm:inset-auto sm:bottom-7 sm:right-7 md:bottom-9 md:right-9 sm:w-[410px] sm:h-[min(640px,calc(100vh-48px))] bg-[#FAF9F3] border border-[#E5E3D9] rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-fade-in-up"
             role="dialog"
             aria-modal="true"
             aria-label="AI Experience Concierge Chat"
